@@ -62,10 +62,6 @@ $(function(){
         inputCheck();
     });
 
-    $('#prefecture').on('change', function(){
-        inputCheck();
-    });
-
     //入力チェック
     function inputCheck() {
         let result;
@@ -125,17 +121,6 @@ $(function(){
         if(!($('#agree').prop('checked'))){
             message += '個人情報の取り扱いについてご同意いただける場合は、チェックボックスにチェックしてください。\n';
             err = true;
-        }
-
-        //セレクトボックスのチェック
-        //console.log($('#prefecture').val());
-        if($('#prefecture').val() == ''){
-            $('#prefecture').css('background-color','#f79999');
-            message += '都道府県を選択してください。\n';
-            err = true;
-        }else{
-            //元に戻す
-           $('#prefecture').css('background-color','#fafafa'); 
         }
 
         //画像の切り替え　src属性の設定
