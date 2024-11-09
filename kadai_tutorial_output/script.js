@@ -38,9 +38,6 @@ $(function(){
         }
     });
 
-    // $('#name').on('blur',function(){
-
-    // });
     //イベントblur：フォーカスが外れた時
     $('#name').blur(function(){
         inputCheck();
